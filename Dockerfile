@@ -9,7 +9,7 @@ RUN apt-get update && \
     autoconf bison build-essential curl git-core libcurl4-openssl-dev \
     libffi-dev libgdbm3 libgdbm-dev libreadline-dev libncurses5-dev \
     libsqlite3-dev libssl-dev libxml2-dev libxslt1-dev libyaml-dev \
-    python-minimal sqlite3 zlib1g-dev
+    python sqlite3 zlib1g-dev
 
 # Clone everything, and setup the path.
 RUN git clone git://github.com/sstephenson/rbenv.git /root/.rbenv && \
