@@ -8,6 +8,7 @@ A Dockerfile building upon this image might look like this:
 
 ```dockerfile
 FROM noonat/rbenv-nodenv
+
 RUN rbenv install 2.2.0 && \
     CONFIGURE_OPTS="--disable-install-doc" rbenv global 2.2.0 && \
     gem install bundler && \
