@@ -1,7 +1,9 @@
+IMAGE ?= noonat/rbenv-nodenv
+
 build:
-	docker build -t noonat/rbenv-nodenv .
+	docker build -t $(IMAGE) .
 
 run:
-	docker run --rm -it noonat/rbenv-nodenv
+	docker run --rm -it $(IMAGE)
 
-.PHONY: build
+.PHONY: build run
