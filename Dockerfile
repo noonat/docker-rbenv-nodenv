@@ -28,11 +28,11 @@ RUN apt-get update && \
     zlib1g-dev
 
 # Clone everything, and setup the path.
-RUN git clone git://github.com/sstephenson/rbenv.git /root/.rbenv && \
-    git clone git://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build && \
-    git clone git://github.com/sstephenson/rbenv-gem-rehash.git /root/.rbenv/plugins/rbenv-gem-rehash && \
-    git clone git://github.com/OiNutter/nodenv.git /root/.nodenv && \
-    git clone git://github.com/OiNutter/node-build.git /root/.nodenv/plugins/node-build
+RUN git clone git://github.com/rbenv/rbenv.git /root/.rbenv && \
+    git clone git://github.com/rbenv/ruby-build.git /root/.rbenv/plugins/ruby-build && \
+    git clone git://github.com/nodenv/nodenv.git /root/.nodenv && \
+    git clone git://github.com/nodenv/node-build.git /root/.nodenv/plugins/node-build && \
+    git clone git://github.com/nodenv/nodenv-package-rehash.git /root/.nodenv/plugins/nodenv-package-rehash
 ENV PATH /root/.rbenv/shims:/root/.rbenv/bin:/root/.nodenv/shims:/root/.nodenv/bin:$PATH
 
 CMD ["/bin/bash"]

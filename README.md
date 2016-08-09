@@ -13,8 +13,7 @@ RUN rbenv install 2.2.0 && \
     CONFIGURE_OPTS="--disable-install-doc" rbenv global 2.2.0 && \
     gem install bundler && \
     nodenv install 0.11.9 && \
-    nodenv global 0.11.9 && \
-    nodenv rehash
+    nodenv global 0.11.9
 ```
 
 [rbenv]: https://github.com/sstephenson/rbenv
