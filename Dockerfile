@@ -1,10 +1,11 @@
-FROM debian:jessie
+FROM debian:stretch
 MAINTAINER Nathan Ostgard <noonat@phuce.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install build dependencies. Note that python is required to build Node.
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
     autoconf \
     bison \
