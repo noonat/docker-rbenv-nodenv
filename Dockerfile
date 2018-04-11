@@ -33,7 +33,8 @@ RUN git clone https://github.com/rbenv/rbenv.git /root/.rbenv && \
     git clone https://github.com/rbenv/ruby-build.git /root/.rbenv/plugins/ruby-build && \
     git clone https://github.com/nodenv/nodenv.git /root/.nodenv && \
     git clone https://github.com/nodenv/node-build.git /root/.nodenv/plugins/node-build && \
-    git clone https://github.com/nodenv/nodenv-package-rehash.git /root/.nodenv/plugins/nodenv-package-rehash
+    git clone https://github.com/nodenv/nodenv-package-rehash.git /root/.nodenv/plugins/nodenv-package-rehash && \
+    git clone https://github.com/nodenv/nodenv-update.git /root/.nodenv/plugins/nodenv-update
 ENV PATH /root/.rbenv/shims:/root/.rbenv/bin:/root/.nodenv/shims:/root/.nodenv/bin:$PATH
 
 CMD ["/bin/bash"]
