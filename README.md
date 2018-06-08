@@ -16,5 +16,26 @@ RUN rbenv install 2.2.0 && \
     nodenv global 0.11.9
 ```
 
+Older Ruby Versions
+-------------------
+
+If you're using an older version of Ruby, you may run into an error about
+OpenSSL when installing:
+
+```
+The Ruby openssl extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `apt-get install -y libssl-dev` to fetch missing dependencies.
+```
+
+Ruby versions < 2.4 [aren't compatible with OpenSSL 1.1][openssl], so you'll
+need to install an older version of SSL for these older Ruby versions. You
+can do that in your Dockerfile with:
+
+```
+RUN apt-get install -y libssl1.0-dev
+```
+
 [rbenv]: https://github.com/sstephenson/rbenv
 [nodenv]: https://github.com/OiNutter/nodenv
+[openssl]: https://github.com/rbenv/ruby-build/issues/1199
